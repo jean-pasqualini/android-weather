@@ -5,4 +5,15 @@
     <string name="create_city_negative">Cancel</string>
     <string name="create_city_city_hint">New york, London…</string>
     <string name="menu_create_city">Create city</string>
+    
+    <string name="delete_city_title">Voulez vous vraiment supprimer %1$s ?</string>
+    <string name="delete_city_positive">Supprimer ville</string>
+    <string name="delete_city_negative">Annuler ?</string>
+    <string name="city_message_error_count_not_create_city">Could not delete city</string>
+    <string name="city_message_error_count_not_delete_city">Could not create city</string>
+    <string name="city_message_info_deleted">La ville %1$s à bien été supprimer de la liste</string>
+    <string name="weather_error_could_not_load_information_meteo">Impossible d\'obtenir les informations météo de la ville</string>
+    <string name="weather_temperature_value">%1$d °C</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_pressure_value">%1$d hPa</string>
 </resources>
