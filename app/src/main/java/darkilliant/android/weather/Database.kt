@@ -1,11 +1,11 @@
-package com.example.weather
+package darkilliant.android.weather
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
-import com.example.weather.city.City
+import darkilliant.android.weather.city.City
 
 private const val DATABASE_NAME = "weather.db"
 private const val DATABASE_VERSION = 1
@@ -26,7 +26,10 @@ private const val CITY_QUERY_SELECT_ALL = """
 """
 
 class Database(context: Context)
-    : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
+    : SQLiteOpenHelper(context,
+    DATABASE_NAME, null,
+    DATABASE_VERSION
+)
 {
     val TAG = Database::class.java.simpleName
 

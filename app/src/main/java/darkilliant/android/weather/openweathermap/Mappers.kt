@@ -1,6 +1,6 @@
-package com.example.weather.openweathermap
+package darkilliant.android.weather.openweathermap
 
-import com.example.weather.weather.Weather
+import darkilliant.android.weather.weather.Weather
 
 fun mapOpenWeatherDataToWeather(weatherWrapper: WeatherWrapper): Weather {
     val weatherFirst = weatherWrapper.weather.first()

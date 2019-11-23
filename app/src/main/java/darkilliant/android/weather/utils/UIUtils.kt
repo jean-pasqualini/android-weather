@@ -1,4 +1,4 @@
-package com.example.weather.utils
+package darkilliant.android.weather.utils
 
 import android.content.Context
 import android.content.Intent

@@ -1,8 +1,8 @@
-package com.example.weather.weather
+package darkilliant.android.weather.weather
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.weather.R
+import darkilliant.android.weather.R
 
 class WeatherActivity: AppCompatActivity() {
 
@@ -12,7 +12,9 @@ class WeatherActivity: AppCompatActivity() {
         setContentView(R.layout.weather_activity)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, WeatherFragment.newInstance())
+            .replace(R.id.fragment_container,
+                WeatherFragment.newInstance()
+            )
             .commit()
     }
 }

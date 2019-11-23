@@ -1,7 +1,7 @@
-package com.example.weather
+package darkilliant.android.weather
 
 import android.app.Application
-import com.example.weather.openweathermap.OpenWeatherService
+import darkilliant.android.weather.openweathermap.OpenWeatherService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

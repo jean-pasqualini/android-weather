@@ -1,4 +1,4 @@
-package com.example.weather.weather
+package darkilliant.android.weather.weather
 
 import android.os.Bundle
 import android.util.Log
@@ -6,21 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.weather.App
-import com.example.weather.R
-import com.example.weather.openweathermap.WeatherWrapper
-import com.example.weather.openweathermap.mapOpenWeatherDataToWeather
-import com.example.weather.utils.toast
+import darkilliant.android.weather.App
+import darkilliant.android.weather.R
+import darkilliant.android.weather.openweathermap.WeatherWrapper
+import darkilliant.android.weather.openweathermap.mapOpenWeatherDataToWeather
+import darkilliant.android.weather.utils.toast
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_weather.*
-import kotlinx.android.synthetic.main.item_city.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class WeatherFragment: Fragment() {
     companion object {
-        val EXTRA_CITY_NAME = "com.example.weather.extras.EXTRA_CITY_NAME"
+        val EXTRA_CITY_NAME = "darkilliant.android.weather.extras.EXTRA_CITY_NAME"
 
         fun newInstance() = WeatherFragment()
     }
@@ -45,7 +44,7 @@ class WeatherFragment: Fragment() {
         swipe_refresh.setOnRefreshListener { this.refreshWeather() }
 
         if (activity?.intent!!.hasExtra(EXTRA_CITY_NAME)) {
-            updateWeatherForCity(activity!!.intent.getStringExtra(EXTRA_CITY_NAME))
+            updateWeatherForCity(activity!!.intent.getStringExtra(EXTRA_CITY_NAME) as String)
         } else {
             Log.e(TAG, "not extra")
         }
@@ -73,10 +72,11 @@ class WeatherFragment: Fragment() {
                 call: Call<WeatherWrapper>,
                 response: Response<WeatherWrapper>
             ) {
-                Log.i(TAG, "OpenWeatherMap response: ${response?.body()}")
+                Log.i(TAG, "OpenWeatherMap response: ${response.body()}")
 
-                response?.body()?.let {
-                    val weather = mapOpenWeatherDataToWeather(it)
+                response.body()?.let {
+                    val weather =
+                        mapOpenWeatherDataToWeather(it)
                     Log.i(TAG, "Weather response: ${weather}")
                     updateUi(weather)
                 }

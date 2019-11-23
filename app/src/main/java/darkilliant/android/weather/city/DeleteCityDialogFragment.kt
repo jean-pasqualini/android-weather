@@ -1,10 +1,10 @@
-package com.example.weather.city
+package darkilliant.android.weather.city
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
-import com.example.weather.R
+import darkilliant.android.weather.R
 
 class DeleteCityDialogFragment: DialogFragment() {
 
@@ -14,7 +14,7 @@ class DeleteCityDialogFragment: DialogFragment() {
     }
 
     companion object {
-        val EXTRA_CITY_NAME = "com.example.weather.extras.EXTRA_CITY_NAME"
+        val EXTRA_CITY_NAME = "darkilliant.android.weather.extras.EXTRA_CITY_NAME"
 
         fun newInstance(cityName: String): DeleteCityDialogFragment {
             val fragment = DeleteCityDialogFragment()

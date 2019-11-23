@@ -1,15 +1,15 @@
-package com.example.weather.city
+package darkilliant.android.weather.city
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.weather.R
-import com.example.weather.utils.launch
-import com.example.weather.utils.toast
-import com.example.weather.weather.WeatherActivity
-import com.example.weather.weather.WeatherFragment
-import kotlinx.android.synthetic.main.activity_city.*
+import darkilliant.android.weather.R
+import darkilliant.android.weather.utils.launch
+import darkilliant.android.weather.utils.toast
+import darkilliant.android.weather.weather.WeatherActivity
+import darkilliant.android.weather.weather.WeatherFragment
 
-class CityActivity : AppCompatActivity(), CityFragment.CityFragmentListener {
+class CityActivity : AppCompatActivity(),
+    CityFragment.CityFragmentListener {
     private lateinit var cityFragment: CityFragment
     private var currentCity: City? = null
 
@@ -21,7 +21,7 @@ class CityActivity : AppCompatActivity(), CityFragment.CityFragmentListener {
 
         cityFragment = supportFragmentManager.findFragmentById(R.id.city_fragment) as CityFragment
         cityFragment.listener = this
-        weatherFragment = supportFragmentManager.findFragmentById(R.id.weather_fragment) as WeatherFragment
+        weatherFragment = supportFragmentManager.findFragmentById(R.id.weather_fragment) as WeatherFragment?
     }
 
     override fun onCitySelected(city: City) {

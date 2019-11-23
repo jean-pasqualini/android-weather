@@ -1,4 +1,4 @@
-package com.example.weather.weather
+package darkilliant.android.weather.weather
 
 data class Weather(
     val description: String,

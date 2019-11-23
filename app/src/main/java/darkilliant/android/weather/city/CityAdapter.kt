@@ -1,4 +1,4 @@
-package com.example.weather.city
+package darkilliant.android.weather.city
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.weather.R
+import darkilliant.android.weather.R
 
 class CityAdapter(
     private val cities: List<City>,
-    private val cityListener: CityAdapter.CityItemListener
+    private val cityListener: CityItemListener
 ) : RecyclerView.Adapter<CityAdapter.ViewHolder>(), View.OnClickListener {
 
     interface CityItemListener {

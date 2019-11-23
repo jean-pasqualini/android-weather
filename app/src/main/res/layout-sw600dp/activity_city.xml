@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".city.CityActivity">
+    tools:context="darkilliant.android.weather.city.CityActivity">
 
     <fragment
         android:id="@+id/city_fragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="4"
-        android:name="com.example.weather.city.CityFragment"
-        class="com.example.weather.city.CityFragment"/>
+        android:name="darkilliant.android.weather.city.CityFragment"
+        class="darkilliant.android.weather.city.CityFragment"/>
 
     <fragment
         android:id="@+id/weather_fragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="6"
-        android:name="com.example.weather.weather.WeatherFragment"/>
+        android:name="darkilliant.android.weather.weather.WeatherFragment"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.weather.openweathermap
+package darkilliant.android.weather.openweathermap
 
 data class WeatherWrapper(
     val base: String,

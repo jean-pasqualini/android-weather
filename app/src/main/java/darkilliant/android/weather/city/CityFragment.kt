@@ -1,16 +1,14 @@
-package com.example.weather.city
+package darkilliant.android.weather.city
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.weather.App
-import com.example.weather.Database
-import com.example.weather.R
-import com.example.weather.utils.toast
+import darkilliant.android.weather.App
+import darkilliant.android.weather.Database
+import darkilliant.android.weather.R
+import darkilliant.android.weather.utils.toast
 
 class CityFragment: Fragment(), CityAdapter.CityItemListener {
 
@@ -87,7 +85,8 @@ class CityFragment: Fragment(), CityAdapter.CityItemListener {
 
     private fun showCreateCityDialog() {
         val createCityFragment = CreateCityDialogFragment()
-        createCityFragment.listener = object: CreateCityDialogFragment.CreateCityDialogListener {
+        createCityFragment.listener = object:
+            CreateCityDialogFragment.CreateCityDialogListener {
             override fun onDialogNegativeClick() {
 
             }
@@ -102,9 +101,11 @@ class CityFragment: Fragment(), CityAdapter.CityItemListener {
 
 
     private fun showDeleteCityDialog(city: City) {
-        val deleteCityFragment = DeleteCityDialogFragment.newInstance(city.name)
+        val deleteCityFragment =
+            DeleteCityDialogFragment.newInstance(city.name)
 
-        deleteCityFragment.listener = object: DeleteCityDialogFragment.DeleteCityDialogListener {
+        deleteCityFragment.listener = object:
+            DeleteCityDialogFragment.DeleteCityDialogListener {
             override fun onDialogNegativeClick() { }
 
             override fun onDialogPositiveClick() {

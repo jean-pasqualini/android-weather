@@ -1,4 +1,4 @@
-package com.example.weather.city
+package darkilliant.android.weather.city
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
-import com.example.weather.R
+import darkilliant.android.weather.R
 
 class CreateCityDialogFragment: DialogFragment() {
 

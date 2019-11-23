@@ -1,4 +1,4 @@
-package com.example.weather.city
+package darkilliant.android.weather.city
 
 data class City(var id: Long, var name: String) {
 
